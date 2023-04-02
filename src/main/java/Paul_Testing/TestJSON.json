@@ -1,0 +1,41 @@
+{
+    [
+  {
+    "type": "LocalEntry",
+    "path": "/path/to/local/file.txt"
+  },
+  {
+    "type": "RemoteEntry",
+    "path": "/path/to/remote/file.txt",
+    "is_local": false,
+    "servicePrincipalKey": "xxx",
+    "accessKeyBase64": "xxx",
+    "repositoryId": "xxx"
+  },
+  {
+    "type": "NameFilter",
+    "name": "*.txt"
+  },
+  {
+    "type": "LengthFilter",
+    "min_length": 100,
+    "max_length": 1000
+  },
+  {
+    "type": "ContentFilter",
+    "keyword": "hello"
+  },
+  {
+    "type": "CountFilter",
+    "max_count": 10
+  },
+  {
+    "type": "Split"
+  },
+  {
+    "type": "List"
+  },
+  {
+    "type": "Print"
+  }
+]
