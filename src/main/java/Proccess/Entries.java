@@ -24,8 +24,8 @@ public class Entries {
         this.name = name;
     }
     
-    public String getLength() {
-        return type;
+    public long getLength() {
+        return Length;
     }
 
     public void setLength(long length) {
