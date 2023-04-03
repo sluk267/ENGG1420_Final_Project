@@ -27,7 +27,7 @@ public class ReadJSON {
     private final JSONParser parser = new JSONParser();
     private final Object fileInput; 
 
-    ReadJSON(String path){
+    ReadJSON(String path) throws IOException, ParseException{
         this.JSONFILEpath = path;
         this.fileInput = parser.parse(new FileReader(JSONFILEpath));
         JSONObject jsonObject = (JSONObject)fileInput;
