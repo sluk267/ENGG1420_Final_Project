@@ -6,7 +6,13 @@
 			"input_entries": [
 				{
 					"type": "local",
-					"path": "c:\\sample\\text_files"
+					"path": "c:\\sample\\text_file1"
+				},
+                                
+                                {
+					"type": "remote",
+					"repositoryid": "123",
+                                        "entryid": "456"
 				}
 			],
 			"parameters": [
@@ -27,6 +33,40 @@
 				{
 					"name": "Operator",
 					"value": "GTE"
+				}
+			]
+		},
+                {
+			"type": "NameFilter",
+			"input_entries": [],
+			"parameters": [
+				{
+					"name": "Key",
+					"value": "Hello"
+				}
+			]
+		},
+                {
+			"type": "ContentFilter",
+			"input_entries": [],
+			"parameters": [
+				{
+					"name": "Key",
+					"value": "Hello"
+				}
+			]
+		},
+                {
+			"type": "CountFilter",
+			"input_entries": [],
+			"parameters": [
+				{
+					"name": "Key",
+					"value": "Hello"
+				},
+                                {
+					"name": "Min",
+					"value": "2"
 				}
 			]
 		},
