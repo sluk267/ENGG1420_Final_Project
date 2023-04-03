@@ -14,6 +14,7 @@ public class Entries {
     private String path;
     private String repositoryID;
     private String entryID;
+    private long Length;
 
     public String getName() {
         return name;
@@ -21,6 +22,14 @@ public class Entries {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public String getLength() {
+        return type;
+    }
+
+    public void setLength(long length) {
+        this.Length = length;
     }
     
     public String getType() {
