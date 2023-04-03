@@ -10,12 +10,14 @@ package Proccess;
  */
 public class PrintElement {
     Entries[] entryList;
-    void printElement(Entries entry){
-        if(entry.type == "local"){
+    public void printElement(Entries entry){
+        if("local".equals(entry.getType())){
             System.out.println("Name:" + entry.getName());
             System.out.println("Length:" + entry.getEntryID());
             System.out.println("Path:" + entry.getPath());
-        }else if(entry.type == "remote"){
+        }
+        
+        else if("remote".equals(entry.getType())){
             System.out.println("Id:" + entry.getEntryID());
             System.out.println("Name:" + entry.getName());
             System.out.println("Length:" + entry.getEntryID());
@@ -23,7 +25,7 @@ public class PrintElement {
         }
     }
     
-    PrintElement(Entries[] entryList){
+    public PrintElement(Entries[] entryList){
         this.entryList = entryList;
         
     }
