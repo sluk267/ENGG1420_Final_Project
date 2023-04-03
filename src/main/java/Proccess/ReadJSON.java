@@ -17,6 +17,11 @@ public class ReadJSON {
     //constructor to take JSOn file input
     private String JSONFILEpath = "";   
     public List<Entries> entryList;
+    public JSONObject ListObject;
+    public JSONObject LengthFilterObject;
+    public JSONObject RenameObject;
+    public JSONObject SplitObject;
+    public JSONObject PrintObject;
 
     //opening the JSON file and storing it under the name fileInput 
     private final JSONParser parser = new JSONParser();
