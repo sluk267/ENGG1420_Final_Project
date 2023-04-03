@@ -20,7 +20,7 @@ public class NameFilter {
         this.Key = Key;
     }
     
-    public ArrayList<Entries> Name(){
+    public ArrayList<Entries> Filter(){
         for (Entries obj : inputList) {  //Interate over the input entries object ArrayList.
             String name; //Temp name string that will hold current object's name.
             name = obj.getName(); //Need to create getName method in input objects that are in the arrayList input.
