@@ -31,8 +31,9 @@ public class ReadJSON {
         this.JSONFILEpath = path;
         this.fileInput = parser.parse(new FileReader(JSONFILEpath));
         JSONObject jsonObject = (JSONObject)fileInput;
-        //entries list
-        JSONArray inputEntries = (JSONArray)jsonObject.getJSONArray("processing_elements").getJSONObject(1).getJSONArray("input_entries");
+        JSONArray processingElements = (JSONArray)jsonObject.get("processing_elements");
+        JSONArray inputEntries = (JSONArray)((JSONObject)processingElements.get(0)).get("input_entries");
+        
         for(int i = 0; i<inputEntries.size(); i++){
             JSONObject temp = (JSONObject)inputEntries.get(i);
             if(temp.get("type") == "local"){
@@ -41,8 +42,11 @@ public class ReadJSON {
                 entryList.add(new Entries("remote", (String)temp.get("repositoryID"), (String)temp.get("entryID")));
             }
         }
-        // length filter object
-        this.LengthFilterObject = 
+        this.LengthFilterObject = (JSONObject)processingElements.get(1);
+        this.ListObject = (JSONObject)processingElements.get(0);
+        this.RenameObject = (JSONObject)processingElements.get(2);
+        this.SplitObject = (JSONObject)processingElements.get(3);
+        this.PrintObject = (JSONObject)processingElements.get(4);
     }
 
 
