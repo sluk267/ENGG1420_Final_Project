@@ -21,11 +21,15 @@ public class ENGG1420_FinalProject {
     
     public static void main(String[] args) throws IOException, ParseException {
         
+        ReadJSON JSONReader = new ReadJSON("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/main/java/Proccess/TestScenarioTwo.json");
+
+        System.out.println(JSONReader.SplitObject.get("parameters"));
+        
+        
         // This code is used to test the Split Processing Element     
         /*
         ArrayList<String> FileTest = new ArrayList<String>();
-        FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/Proccess/RandomTest/LoremIpsum1.txt");
-        //FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/Proccess/testfile2.txt");
+        FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/main/java/Proccess/RandomText/LoremIpsum1.txt");
         
         SplitProcessingElement myElement = new SplitProcessingElement(FileTest, 50);
         ArrayList<String> outputFiles = myElement.FileSeparater();
@@ -35,5 +39,4 @@ public class ENGG1420_FinalProject {
         }*/
         
     }
-   
 }
