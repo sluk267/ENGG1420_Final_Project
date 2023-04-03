@@ -19,6 +19,9 @@ public class ReadJSON {
     public List<Entries> entryList;
     public JSONObject ListObject;
     public JSONObject LengthFilterObject;
+    public JSONObject NameFilterObject;
+    public JSONObject ContentFilterObject;
+    public JSONObject CountFilterObject;
     public JSONObject RenameObject;
     public JSONObject SplitObject;
     public JSONObject PrintObject;
@@ -42,11 +45,25 @@ public class ReadJSON {
                 entryList.add(new Entries("remote", (String)temp.get("repositoryID"), (String)temp.get("entryID")));
             }
         }
-        this.LengthFilterObject = (JSONObject)processingElements.get(1);
-        this.ListObject = (JSONObject)processingElements.get(0);
-        this.RenameObject = (JSONObject)processingElements.get(2);
-        this.SplitObject = (JSONObject)processingElements.get(3);
-        this.PrintObject = (JSONObject)processingElements.get(4);
+        for(int i = 0; i <= processingElements.size(); i++){
+            if((String)processingElements.get(i).get("type") == "List"){
+                this.ListObject = (JSONObject)processingElements.get(i);
+            }else if((String)processingElements.get(i).get("type") == "LengthFilter"){
+                this.LengthFilterObject = (JSONObject)processingElements.get(i);
+            }else if((String)processingElements.get(i).get("type") == "NameFilter"){
+                this.NameFilterObject = (JSONObject)processingElements.get(i);
+            }else if((String)processingElements.get(i).get("type") == "ContentFilter"){
+                this.ContentFilterObject = (JSONObject)processingElements.get(i);               
+            }else if((String)processingElements.get(i).get("type") == "CountFilter"){
+                this.CountFilterObject = (JSONObject)processingElements.get(i);       
+            }else if((String)processingElements.get(i).get("type") == "Rename"){
+                this.RenameObject = (JSONObject)processingElements.get(i);       
+            }else if((String)processingElements.get(i).get("type") == "Split"){
+                this.SplitObject = (JSONObject)processingElements.get(i);      
+            }else if((String)processingElements.get(i).get("type") == "Print"){
+                this.PrintObject = (JSONObject)processingElements.get(i);       
+            }
+        }
     }
 
 
