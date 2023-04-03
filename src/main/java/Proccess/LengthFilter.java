@@ -22,7 +22,7 @@ public class LengthFilter {
         this.Operator = Operator;
     }
     
-    public ArrayList<Entries> Length(){
+    public ArrayList<Entries> Filter(){
         for (Entries obj : inputList) {  //Interate over the input entries object ArrayList.
             long tempLength = obj.getLength();//Need to create getLength method in input objects that are in the arrayList input.
             
