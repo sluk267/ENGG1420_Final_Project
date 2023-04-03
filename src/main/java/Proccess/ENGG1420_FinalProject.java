@@ -6,6 +6,8 @@ package Proccess;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import org.json.simple.*;
+import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -16,10 +18,7 @@ public class ENGG1420_FinalProject {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
-        
-        ReadJSON read = new ReadJSON("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/main/java/Proccess/TestScenarioTwo.json");
-        
+    public static void main(String[] args) throws IOException, ParseException {
         
         // This code is used to test the Split Processing Element     
         /*
