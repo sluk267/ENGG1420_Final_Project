@@ -8,22 +8,27 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Ryan Vemulapalli
+ * @author Ryan Vemulapalli 
  */
 public class NameFilter {
-    
-    public ArrayList<Object> NameFilter(ArrayList<Object> inputList, String Key){
-        ArrayList<Object> outputList = new ArrayList<Object>();
+    private ArrayList<Entries> outputList = new ArrayList<Entries>();
+    private ArrayList<Entries> inputList;
+    private String Key;
         
-        for (Object obj : inputList) {  //Interate over the input entries object ArrayList.
+    public NameFilter(ArrayList<Entries> inputList, String Key){
+        this.inputList = inputList;
+        this.Key = Key;
+    }
+    
+    public ArrayList<Entries> Name(){
+        for (Entries obj : inputList) {  //Interate over the input entries object ArrayList.
             String name; //Temp name string that will hold current object's name.
             name = obj.getName(); //Need to create getName method in input objects that are in the arrayList input.
             
             if (name.contains(Key)){
                 outputList.add(obj);
             }
-        }   
-        return outputList; //Returned filtered ArrayList
+        }
+        return outputList;
     }
-    
 }
