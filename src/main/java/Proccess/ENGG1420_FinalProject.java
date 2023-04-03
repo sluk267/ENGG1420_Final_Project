@@ -18,21 +18,21 @@ public class ENGG1420_FinalProject {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) throws IOException, ParseException {
         
         // This code is used to test the Split Processing Element     
         /*
         ArrayList<String> FileTest = new ArrayList<String>();
-        FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_FinalProject/src/Proccess/testfile.txt");
-        FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_FinalProject/src/Proccess/testfile2.txt");
+        FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/Proccess/RandomTest/LoremIpsum1.txt");
+        //FileTest.add("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/Proccess/testfile2.txt");
         
-        SplitProcessingElement myElement = new SplitProcessingElement(FileTest, 2);
+        SplitProcessingElement myElement = new SplitProcessingElement(FileTest, 50);
         ArrayList<String> outputFiles = myElement.FileSeparater();
         
         for(String file : outputFiles){
             System.out.println(file);
-        }
-        */
+        }*/
         
     }
    
