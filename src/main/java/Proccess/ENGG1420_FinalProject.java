@@ -18,7 +18,7 @@ public class ENGG1420_FinalProject {
      */
     public static void main(String[] args) throws IOException {
         
-
+        ReadJSON read = new ReadJSON("");
         // This code is used to test the Split Processing Element     
         /*
         ArrayList<String> FileTest = new ArrayList<String>();
