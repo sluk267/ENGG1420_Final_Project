@@ -6,7 +6,17 @@
 			"input_entries": [
 				{
 					"type": "local",
-					"path": "c:\\sample\\text_files"
+					"path": "c:\\sample\\text_file1"
+				},
+                                
+                                {
+					"type": "local",
+					"path": "c:\\sample\\text_file2"
+				},
+                                
+                                {
+					"type": "local",
+					"path": "c:\\sample\\text_file3"
 				}
 			],
 			"parameters": [
