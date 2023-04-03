@@ -11,10 +11,19 @@ import java.util.ArrayList;
  * @author Ryan Vemulapalli
  */
 public class LengthFilter {
-    public ArrayList<Object> NameFilter(ArrayList<Object> inputList, long Length, String Operator){
-        ArrayList<Object> outputList = new ArrayList<Object>();
-        
-        for (Object obj : inputList) {  //Interate over the input entries object ArrayList.
+    private ArrayList<Entries> outputList = new ArrayList<Entries>();
+    private ArrayList<Entries> inputList;
+    private long Length;
+    private String Operator;
+    
+    public LengthFilter(ArrayList<Entries> inputList, long Length, String Operator){
+        this.inputList = inputList;
+        this.Length = Length;
+        this.Operator = Operator;
+    }
+    
+    public ArrayList<Entries> Length(){
+        for (Entries obj : inputList) {  //Interate over the input entries object ArrayList.
             long tempLength = obj.getLength();//Need to create getLength method in input objects that are in the arrayList input.
             
             // The switch statement compares two integer values (tempLength and Length) based on the value of a string variable (Operator)
