@@ -25,6 +25,7 @@ public class ReadJSON {
     public JSONObject RenameObject;
     public JSONObject SplitObject;
     public JSONObject PrintObject;
+    public JSONArray processingElements;
 
     //opening the JSON file and storing it under the name fileInput 
     private final JSONParser parser = new JSONParser();
@@ -34,7 +35,7 @@ public class ReadJSON {
         this.JSONFILEpath = path;
         this.fileInput = parser.parse(new FileReader(JSONFILEpath));
         JSONObject jsonObject = (JSONObject)fileInput;
-        JSONArray processingElements = (JSONArray)jsonObject.get("processing_elements");
+        this.processingElements = (JSONArray)jsonObject.get("processing_elements");
         JSONArray inputEntries = (JSONArray)((JSONObject)processingElements.get(0)).get("input_entries");
         
         for(int i = 0; i<inputEntries.size(); i++){
