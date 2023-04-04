@@ -22,7 +22,7 @@ public class ENGG1420_FinalProject {
     public static void main(String[] args) throws IOException, ParseException {
         
         ReadJSON JSONReader = new ReadJSON("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/main/java/Proccess/TestScenarioTwo.json");
-
+        
         System.out.println(JSONReader.SplitObject.get("parameters"));
         
         
