@@ -13,6 +13,8 @@ import java.lang.reflect.Parameter;
 import java.util.List;
 
 public abstract class ProcessingElement {
+    //Create Local Array Lists of type entry and parameter.
+    //Also a string of type
     private List<Entry> inputEntries;
     private List<Parameter> parameters;
     private String type;
@@ -46,7 +48,8 @@ public abstract class ProcessingElement {
     public void addEntry(Entry entry) {
         inputEntries.add(entry);
     }
-
+    
+    
     void process(Entry entry) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
