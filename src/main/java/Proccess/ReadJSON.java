@@ -46,7 +46,7 @@ public class ReadJSON {
             }
         }
         for(int i = 0; i <= processingElements.size(); i++){
-            if((String)processingElements.get(i).get("type") == "List"){
+            if((String)((JSONObject)processingElements.get(i).get("type")) == "List"){
                 this.ListObject = (JSONObject)processingElements.get(i);
             }else if((String)processingElements.get(i).get("type") == "LengthFilter"){
                 this.LengthFilterObject = (JSONObject)processingElements.get(i);
@@ -64,6 +64,7 @@ public class ReadJSON {
                 this.PrintObject = (JSONObject)processingElements.get(i);       
             }
         }
+ 
     }
 
 
