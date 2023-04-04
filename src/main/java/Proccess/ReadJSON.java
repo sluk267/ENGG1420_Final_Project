@@ -46,21 +46,21 @@ public class ReadJSON {
             }
         }
         for(int i = 0; i <= processingElements.size(); i++){
-            if((String)((JSONObject)processingElements.get(i).get("type")) == "List"){
+            if((String)(((JSONObject)processingElements.get(i)).get("type")) == "List"){
                 this.ListObject = (JSONObject)processingElements.get(i);
-            }else if((String)processingElements.get(i).get("type") == "LengthFilter"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "LengthFilter"){
                 this.LengthFilterObject = (JSONObject)processingElements.get(i);
-            }else if((String)processingElements.get(i).get("type") == "NameFilter"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "NameFilter"){
                 this.NameFilterObject = (JSONObject)processingElements.get(i);
-            }else if((String)processingElements.get(i).get("type") == "ContentFilter"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "ContentFilter"){
                 this.ContentFilterObject = (JSONObject)processingElements.get(i);               
-            }else if((String)processingElements.get(i).get("type") == "CountFilter"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "CountFilter"){
                 this.CountFilterObject = (JSONObject)processingElements.get(i);       
-            }else if((String)processingElements.get(i).get("type") == "Rename"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "Rename"){
                 this.RenameObject = (JSONObject)processingElements.get(i);       
-            }else if((String)processingElements.get(i).get("type") == "Split"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "Split"){
                 this.SplitObject = (JSONObject)processingElements.get(i);      
-            }else if((String)processingElements.get(i).get("type") == "Print"){
+            }else if((String)((JSONObject)processingElements.get(i)).get("type") == "Print"){
                 this.PrintObject = (JSONObject)processingElements.get(i);       
             }
         }
