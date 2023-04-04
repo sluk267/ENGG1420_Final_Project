@@ -10,7 +10,8 @@ package Proccess;
  */
 public class PrintElement {
     Entries[] entryList;
-    public void printElement(Entries entry){
+    public void printE(){
+        for(Entries entry : entryList)
         if("local".equals(entry.getType())){
             System.out.println("Name:" + entry.getName());
             System.out.println("Length:" + entry.getEntryID());
