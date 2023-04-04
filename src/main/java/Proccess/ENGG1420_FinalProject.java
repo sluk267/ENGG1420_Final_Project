@@ -23,7 +23,7 @@ public class ENGG1420_FinalProject {
         
         ReadJSON JSONReader = new ReadJSON("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/main/java/Proccess/TestScenarioTwo.json");
         
-        System.out.println(JSONReader.SplitObject.get("parameters"));
+        System.out.println(JSONReader.SplitObject.get("parameters").get("name"));
         
         
         // This code is used to test the Split Processing Element     
