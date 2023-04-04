@@ -32,13 +32,16 @@ public class ReadJSON {
     private final JSONParser parser = new JSONParser();
     private final Object fileInput; 
 
+    //Read JSON 
     ReadJSON(String path) throws IOException, ParseException{
+        //Fills Local Variables
         this.JSONFILEpath = path;
         this.fileInput = parser.parse(new FileReader(JSONFILEpath));
         JSONObject jsonObject = (JSONObject)fileInput;
         this.processingElements = (JSONArray)jsonObject.get("processing_elements");
         JSONArray inputEntries = (JSONArray)((JSONObject)processingElements.get(0)).get("input_entries");
         
+        //Makes Entries List
         for(int i = 0; i<inputEntries.size(); i++){
             JSONObject temp = (JSONObject)inputEntries.get(i);
             if(temp.get("type") == "local"){
@@ -47,6 +50,7 @@ public class ReadJSON {
                 entryList.add(new Entries("remote", (String)temp.get("repositoryID"), (String)temp.get("entryID")));
             }
         }
+        //Assign values to JSONObjects
         for(int i = 0; i < processingElements.size(); i++){
             if("List".equals((((JSONObject)processingElements.get(i)).get("type")))){
                 this.ListObject = (JSONObject)processingElements.get(i);
