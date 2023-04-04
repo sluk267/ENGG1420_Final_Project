@@ -27,7 +27,7 @@ public class RenameProcessingElement {
         Iterator i = inputList.iterator();
 
         while (i.hasNext()) {
-            String newPath = StringUtils.substringBeforeLast(i.next(), ".") + suffixList + "." + StringUtils.substringAfterLast(i.next(), ".");
+            //String newPath = StringUtils.substringBeforeLast(i.next(), ".") + suffixList + "." + StringUtils.substringAfterLast(i.next(), ".");
         }
         return inputList;
     }
@@ -36,6 +36,6 @@ public class RenameProcessingElement {
         
         String input = "test.txt";
         String suffix = "1";
-        ArrayList<String> newList = renameFile();
+        //ArrayList<String> newList = renameFile();
     }
 }
