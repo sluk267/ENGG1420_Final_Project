@@ -1,0 +1,59 @@
+{
+	"name": "Test Scenario",
+	"processing_elements": [
+		{
+			"type": "List",
+			"input_entries": [
+				{
+					"type": "local",
+					"path": "C:\\Users\\paulp\\Desktop/primes-from-0-to-100k.txt"
+				}
+			],
+			"parameters": [
+				{
+					"name": "Max",
+					"value": "50"
+				}
+			]
+		},
+		{
+			"type": "LengthFilter",
+			"input_entries": [],
+			"parameters": [
+				{
+					"name": "Length",
+					"value": "1024"
+				},
+				{
+					"name": "Operator",
+					"value": "GTE"
+				}
+			]
+		},
+		{
+			"type": "Rename",
+			"input_entries": [],
+			"parameters": [
+				{
+					"name": "Suffix",
+					"value": "_edited"
+				}
+			]
+		},
+		{
+			"type": "Split",
+			"input_entries": [],
+			"parameters": [
+				{
+					"name": "Lines",
+					"value": "10"
+				}
+			]
+		},
+		{
+			"type": "Print",
+			"input_entries": [],
+			"parameters": []
+		}
+	]
+}
