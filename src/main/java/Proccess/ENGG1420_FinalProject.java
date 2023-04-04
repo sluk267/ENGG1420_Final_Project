@@ -22,8 +22,10 @@ public class ENGG1420_FinalProject {
     public static void main(String[] args) throws IOException, ParseException {
         
         ReadJSON JSONReader = new ReadJSON("C:/Users/ryanv/Documents/Programing/Java/ENGG1420_Final_Project/src/main/java/Proccess/TestScenarioTwo.json");
-        
-        System.out.println(JSONReader.SplitObject.get("parameters"));
+        JSONArray parameters = (JSONArray)JSONReader.SplitObject.get("parameters");
+        JSONObject parameters2 = (JSONObject)parameters.get(0);
+        String output = (String)parameters2.get("name");
+        System.out.println(output);
         
         
         // This code is used to test the Split Processing Element     
