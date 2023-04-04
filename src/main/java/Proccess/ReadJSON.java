@@ -26,6 +26,7 @@ public class ReadJSON {
     public JSONObject SplitObject;
     public JSONObject PrintObject;
     public JSONArray processingElements;
+    public JSONArray Elements;
 
     //opening the JSON file and storing it under the name fileInput 
     private final JSONParser parser = new JSONParser();
