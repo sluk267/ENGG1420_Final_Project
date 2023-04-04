@@ -22,7 +22,7 @@ public class RenameProcessingElement {
         this.suffixList = suffixList;
     }
 
-    public static ArrayList<String> renameFile() throws IOException {
+    public ArrayList<String> renameFile() throws IOException {
 
         Iterator i = inputList.iterator();
 
